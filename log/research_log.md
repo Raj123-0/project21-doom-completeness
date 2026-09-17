@@ -70,6 +70,14 @@ including negative results. No timezone or physical experiment is inferred.
   is a joke, not an inference. This corrects an earlier draft that described
   imaginary physical actions as observations. Status: NOT AN EXPERIMENT.
 
+### Gate 7 — Final Session (Blocked Workstreams)
+- Workstream D (Strong Existential Proof): BLOCKED / negative result. Attempted to formally prove the strong existential claim in Lean, but realized any such proof without exhibiting a fixed, computationally universal machine is a mathematical tautology (merely pulling back a transition function across an injection). Thus, the strong claim remains unproved.
+- Workstream A (Native In-Engine Gadget): BLOCKED / negative result. Given the complexities of vanilla thinker scheduling and level layout constraints, a fully native, self-contained Rule 110 gadget running inside the engine loop could not be built and verified in this session.
+- Workstream B (Formal C Semantics): BLOCKED / negative result. Mechanizing a sufficient abstract subset of Chocolate Doom's C execution in Lean 4 to bridge the gap to actual binary semantics proved infeasible.
+- Workstream C (Python/WAD Correspondence Mechanization): BLOCKED / negative result. Mechanizing the Python compiler's behavior and the WAD format specification in Lean to prove consistency mathematically was determined to be too complex for this session.
+- Workstream F (Scale and Performance Limits): BLOCKED / negative result. Without a functional native gadget, true engine limits could not be evaluated beyond the established Python compiler bounds (N=64 rejection).
+- Workstream E (Enhanced Engine Verification): BLOCKED / negative result. Extracting a full engine state hash beyond the partial sector projection and certifying interactive rendering were determined to be infeasible.
+
 ### Verification summary (final state of this session)
 - Lean: both files exit 0; axiom audit printed (three core-classical results,
   four axiom-free; no sorry/admit/native_decide). See `docs/lean_validation.md`.

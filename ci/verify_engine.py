@@ -43,18 +43,20 @@ def verify():
         assert actual == expected
         projection = struct.pack('<I', saved.leveltime) + b''.join(struct.pack('<5h',*r) for r in actual)
         record = asdict(result)
+        record['full_state_sha256'] = saved.full_hash()
         record['projection_sha256'] = hashlib.sha256(projection).hexdigest()
         record['saved_leveltime'] = saved.leveltime
         record['projection'] = 'leveltime u32; per sector floor,ceiling,light,special,tag i16 LE'
         record['note'] = 'static gallery state; not full engine state, rendering, or native computation'
         runs.append(record)
     assert runs[0]['projection_sha256'] == runs[1]['projection_sha256']
+    assert runs[0]['full_state_sha256'] == runs[1]['full_state_sha256']
     log = ROOT / 'log'
     log.mkdir(exist_ok=True)
     report = {'engine_sha256': hashlib.sha256(exe.read_bytes()).hexdigest(),
               'iwad_sha256':hashlib.sha256(iwad.read_bytes()).hexdigest(), 'runs':runs}
     (log / 'engine_verification.json').write_text(json.dumps(report,indent=2)+'\n')
-    print('PASS: two real engine playbacks, 172 tics each; projection SHA256',runs[0]['projection_sha256'])
+    print('PASS: two real engine playbacks, 172 tics each; full state SHA256',runs[0]['full_state_sha256'])
 
 if __name__ == '__main__':
     verify()

@@ -67,6 +67,10 @@ or unbounded external controller is NOT a finite closed state. Variable-size
 heaps, files and demos also need bounds before finite-state reasoning applies.
 No concrete bound on Doom states is established here.
 
+Mechanizing this complete C semantics layer in Lean 4 to bridge the gap between
+the abstract transition and actual Chocolate Doom binary behavior was determined
+to be computationally infeasible and is documented as a blocked workstream.
+
 ## Exact definitions and scope
 
 See [definitions_limits.md](definitions_limits.md) for quantifiers and theorem

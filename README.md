@@ -75,7 +75,9 @@ A fixed bounded closed digital installation has finitely many distinguishable
 states. It cannot losslessly host arbitrarily many configurations at once.
 This concerns **unbounded guest into finite Doom**, not **Doom into unbounded
 Rule 110**. The user's existential Strong statement therefore survives that
-obstruction. Exact reversible simulation with a fixed clock cannot merge states
+obstruction (though it remains unproved, as any proof without a concrete
+universal machine is a trivial mathematical tautology).
+Exact reversible simulation with a fixed clock cannot merge states
 without retaining information; history/projection or a noninjective host changes
 those assumptions. No minimal sufficient extension of vanilla Doom was proved.
 
@@ -92,6 +94,8 @@ engine impossibility limit. Sectors = (width+1)(steps+2). Trace computation is
 O(width * steps); geometry generation includes quadratic validation; REJECT
 storage is quadratic in sector count. Tics per **simulated** CA step are N/A:
 no CA transition is executed by Doom. Only the default gallery is engine-tested.
+Creating a native in-engine gadget, extracting formal C semantics, and testing scale
+limits of such a gadget are recorded as explicitly blocked workstreams.
 
 See `docs/definitions_limits.md`, `substrate/utm_spec.md`, `log/research_log.md`
 and the paper for open obligations and prior art. No arXiv/SIGBOVIK submission
