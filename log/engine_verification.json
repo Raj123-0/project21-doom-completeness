@@ -1,0 +1,74 @@
+{
+  "engine_sha256": "15e81c194df270fbd71450222e71846247926fabfb889e72e7d855903454d752",
+  "iwad_sha256": "7323bcc168c5a45ff10749b339960e98314740a734c30d4b9f3337001f9e703d",
+  "runs": [
+    {
+      "cmd": [
+        "C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\cdoom-bin\\chocolate-doom.exe",
+        "-iwad",
+        "C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\freedoom\\freedoom-0.13.0\\freedoom1.wad",
+        "-file",
+        "C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\wads\\doom_utm.wad",
+        "-config",
+        "C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\gallery-iqh_89st\\chocolate-doom.cfg",
+        "-savedir",
+        "C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\gallery-iqh_89st\\save",
+        "-nodraw",
+        "-nosound",
+        "-nomusic",
+        "-nosfx",
+        "-window",
+        "-timedemo",
+        "C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\wads\\doom_utm.lmp",
+        "-statdump",
+        "C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\gallery-iqh_89st\\statdump.txt"
+      ],
+      "returncode": 4294967295,
+      "stdout": "                         Chocolate Doom 3.1.1\nZ_Init: Init zone memory allocation daemon. \nzone memory: 0000020C0338F040, 2000000 allocated for zone\nV_Init: allocate screens.\nM_LoadDefaults: Load system defaults.\n\tdefault file: C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\gallery-iqh_89st\\chocolate-doom.cfg\nsaving config in C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\gallery-iqh_89st\\chocolate-doom.cfg\nW_Init: Init WADfiles.\n adding C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\freedoom\\freedoom-0.13.0\\freedoom1.wad\n adding C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\wads\\doom_utm.wad\n adding C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\wads\\doom_utm.lmp\nPlaying demo C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\wads\\doom_utm.lmp.\nSave directory changed to C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\gallery-iqh_89st\\save\\.\n===========================================================================\n                           Freedoom: Phase 1\n===========================================================================\n Chocolate Doom is free software, covered by the GNU General Public\n License.  There is NO warranty; not even for MERCHANTABILITY or FITNESS\n FOR A PARTICULAR PURPOSE. You are welcome to change and distribute\n copies under certain conditions. See the source for more information.\n===========================================================================\nI_Init: Setting up machine state.\nNET_Init: Init network subsystem.\nM_Init: Init miscellaneous info.\nR_Init: Init DOOM refresh daemon - .......................................\nP_Init: Init Playloop state.\nS_Init: Setting up sound.\nD_CheckNetGame: Checking network game status.\nstartskill 2  deathmatch: 0  startmap: 1  startepisode: 1\nplayer 1 of 1 (1 nodes)\nEmulating the behavior of the 'Ultimate Doom' executable.\nHU_Init: Setting up heads up display.\nST_Init: Init status bar.\nExternal statistics registered.\nCreateUpscaledTexture: Limited texture size to 0x0 (max 16000000 pixels, max texture size 0x0)\nStatistics captured for 0 level(s)\n",
+      "stderr": "DEHACKED:549: warning: Cheat sequence longer than supported by Vanilla dehacked\ntimed 172 gametics in 0 realtics (inf fps)\n\n",
+      "duration_s": 1.6990725994110107,
+      "savegames": {
+        "doomsav0.dsg": "C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\gallery-iqh_89st\\save\\doomsav0.dsg"
+      },
+      "statdump": "",
+      "projection_sha256": "8f5f6e247cf0bd770da72b81a4422716e08b8159dce8d4d721f97debd992800a",
+      "saved_leveltime": 170,
+      "projection": "leveltime u32; per sector floor,ceiling,light,special,tag i16 LE",
+      "note": "static gallery state; not full engine state, rendering, or native computation"
+    },
+    {
+      "cmd": [
+        "C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\cdoom-bin\\chocolate-doom.exe",
+        "-iwad",
+        "C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\freedoom\\freedoom-0.13.0\\freedoom1.wad",
+        "-file",
+        "C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\wads\\doom_utm.wad",
+        "-config",
+        "C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\gallery-fabhdybt\\chocolate-doom.cfg",
+        "-savedir",
+        "C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\gallery-fabhdybt\\save",
+        "-nodraw",
+        "-nosound",
+        "-nomusic",
+        "-nosfx",
+        "-window",
+        "-timedemo",
+        "C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\wads\\doom_utm.lmp",
+        "-statdump",
+        "C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\gallery-fabhdybt\\statdump.txt"
+      ],
+      "returncode": 4294967295,
+      "stdout": "                         Chocolate Doom 3.1.1\nZ_Init: Init zone memory allocation daemon. \nzone memory: 0000016E517D2040, 2000000 allocated for zone\nV_Init: allocate screens.\nM_LoadDefaults: Load system defaults.\n\tdefault file: C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\gallery-fabhdybt\\chocolate-doom.cfg\nsaving config in C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\gallery-fabhdybt\\chocolate-doom.cfg\nW_Init: Init WADfiles.\n adding C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\freedoom\\freedoom-0.13.0\\freedoom1.wad\n adding C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\wads\\doom_utm.wad\n adding C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\wads\\doom_utm.lmp\nPlaying demo C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\wads\\doom_utm.lmp.\nSave directory changed to C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\gallery-fabhdybt\\save\\.\n===========================================================================\n                           Freedoom: Phase 1\n===========================================================================\n Chocolate Doom is free software, covered by the GNU General Public\n License.  There is NO warranty; not even for MERCHANTABILITY or FITNESS\n FOR A PARTICULAR PURPOSE. You are welcome to change and distribute\n copies under certain conditions. See the source for more information.\n===========================================================================\nI_Init: Setting up machine state.\nNET_Init: Init network subsystem.\nM_Init: Init miscellaneous info.\nR_Init: Init DOOM refresh daemon - .......................................\nP_Init: Init Playloop state.\nS_Init: Setting up sound.\nD_CheckNetGame: Checking network game status.\nstartskill 2  deathmatch: 0  startmap: 1  startepisode: 1\nplayer 1 of 1 (1 nodes)\nEmulating the behavior of the 'Ultimate Doom' executable.\nHU_Init: Setting up heads up display.\nST_Init: Init status bar.\nExternal statistics registered.\nCreateUpscaledTexture: Limited texture size to 0x0 (max 16000000 pixels, max texture size 0x0)\nStatistics captured for 0 level(s)\n",
+      "stderr": "DEHACKED:549: warning: Cheat sequence longer than supported by Vanilla dehacked\ntimed 172 gametics in 0 realtics (inf fps)\n\n",
+      "duration_s": 0.4862957000732422,
+      "savegames": {
+        "doomsav0.dsg": "C:\\Users\\davea\\OneDrive\\Desktop\\dooom\\gallery-fabhdybt\\save\\doomsav0.dsg"
+      },
+      "statdump": "",
+      "projection_sha256": "8f5f6e247cf0bd770da72b81a4422716e08b8159dce8d4d721f97debd992800a",
+      "saved_leveltime": 170,
+      "projection": "leveltime u32; per sector floor,ceiling,light,special,tag i16 LE",
+      "note": "static gallery state; not full engine state, rendering, or native computation"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  ".gitattributes": {
+    "bytes": 58,
+    "sha256": "e7309f88c73619e4ee5d67f521bac8bcac005ed4443710ab5c629fde26099a66"
+  },
+  ".github/workflows/verify.yml": {
+    "bytes": 2017,
+    "sha256": "50a5fd07cc3772cac69415ecf29378e1d798f72e70089d942b3e3416822e22fe"
+  },
+  ".gitignore": {
+    "bytes": 251,
+    "sha256": "265ac9403863e5065caf4ebe21234a9c204724f1b3fb56d5346a11f8b1c98c2e"
+  },
+  "LICENSE": {
+    "bytes": 1311,
+    "sha256": "a11c6c51f275757d9dbe8f9088f2aa17ee3a8ffe1f483c9c2ace3bbe9f10c0ac"
+  },
+  "README.md": {
+    "bytes": 5605,
+    "sha256": "3d4f48f2f880e9db58a1be2684d24a1fe9075722496aaabf982c223cd05ffc13"
+  },
+  "ci/benchmark.py": {
+    "bytes": 1281,
+    "sha256": "8b480d0916472ecc45016003d3cf7aa3c527f30169ce1a9730b070903ee47962"
+  },
+  "ci/fetch_dependencies.py": {
+    "bytes": 1250,
+    "sha256": "06a54e3f42faf6b04e2b3c0ce3cafd100a3cc795acf38e5baf061fd71e030b26"
+  },
+  "ci/hash_artifacts.py": {
+    "bytes": 843,
+    "sha256": "e35a4083b51221df231394378bb21f31d1723983a4879f863a493c01b0b0d199"
+  },
+  "ci/smoke.py": {
+    "bytes": 2545,
+    "sha256": "1bd9492281080501f9771f60baa2ce8b5c49dd2f2c7a0b42a0cf17b4d3f77dbd"
+  },
+  "ci/verify_engine.py": {
+    "bytes": 2994,
+    "sha256": "838d2c04b93d577811ebdf26c0fee2742ad639105c249c34bd82ab32ba37b1be"
+  },
+  "docs/definitions_limits.md": {
+    "bytes": 5322,
+    "sha256": "71507275d92cf45c8c1e7e1f3d5314dec431f9eae6a2e8a37a854da4bec2fafd"
+  },
+  "docs/doom_transition.md": {
+    "bytes": 5476,
+    "sha256": "ae9aff9974ebe0e4ddd2a25f5884bc5b160ddf0da62992a701c94e664533b6f3"
+  },
+  "docs/lean_validation.md": {
+    "bytes": 3187,
+    "sha256": "e05983455a406b71e4eef64fc219c5d71ea88bf7b405463fd2927e80db5355fe"
+  },
+  "doomc/doomc/__init__.py": {
+    "bytes": 162,
+    "sha256": "d15a39b3495178b51295e2edcbc702dc6095aac60b13f20dff1f84101a5a4530"
+  },
+  "doomc/doomc/__main__.py": {
+    "bytes": 2584,
+    "sha256": "f261f0aaa911e779f6305f5286acd7633860561aad4a13a6a96f1d60538022ba"
+  },
+  "doomc/doomc/lmp.py": {
+    "bytes": 4087,
+    "sha256": "bcdd24a94bad166c62da6e720a60e0b72c8975c6e158449371206c0f253583f6"
+  },
+  "doomc/doomc/mapbuild.py": {
+    "bytes": 17115,
+    "sha256": "54a7a2b7e80ebc50072c0c9621ea890d3f81d9bb8238ff287d1e7189515a95cc"
+  },
+  "doomc/doomc/rule110.py": {
+    "bytes": 737,
+    "sha256": "ae5fb5f895b0819e810ccc7b5d7932c26265d0396d62cbe4713325462a1ab62f"
+  },
+  "doomc/doomc/runner.py": {
+    "bytes": 3851,
+    "sha256": "f48da1c586d98b3cc59695435386e1783be98f9b12300fa06f01bbe27ee90575"
+  },
+  "doomc/doomc/savegame.py": {
+    "bytes": 5510,
+    "sha256": "f04e2a706aa4e8208352aa2e00f16b3d44c61e3836f0a86b400eda0cbb78ebad"
+  },
+  "doomc/doomc/wadfile.py": {
+    "bytes": 2928,
+    "sha256": "5549900e7310f6cb955403b37bb1334dfb9e7f5c208a704a8cf000497d133b46"
+  },
+  "lean-toolchain": {
+    "bytes": 25,
+    "sha256": "8733782dc070a99b312039cda424f601b80f3be6f6f512627da5ba25adc27632"
+  },
+  "log/benchmarks.json": {
+    "bytes": 1463,
+    "sha256": "43fdd7ac7d26d18926aec28ffae9414fbfc0ddb9679bfbf771feaa5b52ccbe9b"
+  },
+  "log/engine_verification.json": {
+    "bytes": 7407,
+    "sha256": "97f368555081e1d9206a8cec173fdd408ddf93679e66fa195991bc00dc0b9161"
+  },
+  "log/research_log.md": {
+    "bytes": 4820,
+    "sha256": "41bcf10b669656b1b3833b4f4b6d518cdad762c4e236baa19f55e22741f4fcfb"
+  },
+  "paper/doom_complete.pdf": {
+    "bytes": 237137,
+    "sha256": "659c312ef09ca3bace2e490957f29cf115f3d80714d9ab005bd043a2f1beb8c4"
+  },
+  "paper/doom_complete.tex": {
+    "bytes": 11341,
+    "sha256": "32b05f7d9c1b006dc21c40a2f110130083a1b21fe74f0762e05d92d0d2c48534"
+  },
+  "proofs/DoomComplete.lean": {
+    "bytes": 4034,
+    "sha256": "f43f5e0bd4d89613d9fb898d09a91eaa3860524e76ea09638c88e83d688617fb"
+  },
+  "proofs/check.ps1": {
+    "bytes": 1044,
+    "sha256": "8df5d616c9f606304e61e07d13482cc7ae98d00cef73336a78c81ce0ff897a41"
+  },
+  "substrate/example.json": {
+    "bytes": 81,
+    "sha256": "c828ab7fec7967e59f2ce9ed83ea1d6fad04f23a0a52804cb4443530aaa8818e"
+  },
+  "substrate/utm_proof.lean": {
+    "bytes": 3190,
+    "sha256": "7a32a162667f03c48a01d363cf0fc6e729b6d4733163e3fda595d1398e638b0e"
+  },
+  "substrate/utm_spec.md": {
+    "bytes": 4090,
+    "sha256": "a5a5fdd12c462738fd7176f73abcc9914e77201097bc362b7ac1b303e534cbd3"
+  },
+  "tests/conftest.py": {
+    "bytes": 107,
+    "sha256": "ad234417a3c120024a8f66ac241405d6a250d9d33005fc83017d7d147892af1b"
+  },
+  "tests/test_core.py": {
+    "bytes": 2035,
+    "sha256": "9090cbd552cc48e67a77593134c950d09cdaca4c168de2991ab9c0093eb54baa"
+  },
+  "wads/doom_utm.json": {
+    "bytes": 6664,
+    "sha256": "930f4baeee29e8355a226deaef09acb2e2be4033c62afdb708ef51fb07508cfb"
+  },
+  "wads/doom_utm.lmp": {
+    "bytes": 702,
+    "sha256": "df27e7a7d0ca22623dd489c0281adaaaa0512e06799b55ac4713d233e74ee096"
+  },
+  "wads/doom_utm.wad": {
+    "bytes": 27520,
+    "sha256": "a71d0bf340b0044a24f8b2db2dfee7e095ebb170f1b265ee62ccf31721852427"
+  }
+}

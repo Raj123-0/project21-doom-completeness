@@ -1,0 +1,484 @@
+{
+  "claim": "static precomputed trace, NOT UTM or native simulation",
+  "boundary": "periodic",
+  "rows": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1,
+      1
+    ]
+  ],
+  "mapping": [
+    {
+      "generation": 0,
+      "cell": 0,
+      "bit": 0,
+      "sector": 10
+    },
+    {
+      "generation": 0,
+      "cell": 1,
+      "bit": 0,
+      "sector": 11
+    },
+    {
+      "generation": 0,
+      "cell": 2,
+      "bit": 0,
+      "sector": 12
+    },
+    {
+      "generation": 0,
+      "cell": 3,
+      "bit": 0,
+      "sector": 13
+    },
+    {
+      "generation": 0,
+      "cell": 4,
+      "bit": 0,
+      "sector": 14
+    },
+    {
+      "generation": 0,
+      "cell": 5,
+      "bit": 0,
+      "sector": 15
+    },
+    {
+      "generation": 0,
+      "cell": 6,
+      "bit": 0,
+      "sector": 16
+    },
+    {
+      "generation": 0,
+      "cell": 7,
+      "bit": 1,
+      "sector": 17
+    },
+    {
+      "generation": 1,
+      "cell": 0,
+      "bit": 0,
+      "sector": 19
+    },
+    {
+      "generation": 1,
+      "cell": 1,
+      "bit": 0,
+      "sector": 20
+    },
+    {
+      "generation": 1,
+      "cell": 2,
+      "bit": 0,
+      "sector": 21
+    },
+    {
+      "generation": 1,
+      "cell": 3,
+      "bit": 0,
+      "sector": 22
+    },
+    {
+      "generation": 1,
+      "cell": 4,
+      "bit": 0,
+      "sector": 23
+    },
+    {
+      "generation": 1,
+      "cell": 5,
+      "bit": 0,
+      "sector": 24
+    },
+    {
+      "generation": 1,
+      "cell": 6,
+      "bit": 1,
+      "sector": 25
+    },
+    {
+      "generation": 1,
+      "cell": 7,
+      "bit": 1,
+      "sector": 26
+    },
+    {
+      "generation": 2,
+      "cell": 0,
+      "bit": 0,
+      "sector": 28
+    },
+    {
+      "generation": 2,
+      "cell": 1,
+      "bit": 0,
+      "sector": 29
+    },
+    {
+      "generation": 2,
+      "cell": 2,
+      "bit": 0,
+      "sector": 30
+    },
+    {
+      "generation": 2,
+      "cell": 3,
+      "bit": 0,
+      "sector": 31
+    },
+    {
+      "generation": 2,
+      "cell": 4,
+      "bit": 0,
+      "sector": 32
+    },
+    {
+      "generation": 2,
+      "cell": 5,
+      "bit": 1,
+      "sector": 33
+    },
+    {
+      "generation": 2,
+      "cell": 6,
+      "bit": 1,
+      "sector": 34
+    },
+    {
+      "generation": 2,
+      "cell": 7,
+      "bit": 1,
+      "sector": 35
+    },
+    {
+      "generation": 3,
+      "cell": 0,
+      "bit": 0,
+      "sector": 37
+    },
+    {
+      "generation": 3,
+      "cell": 1,
+      "bit": 0,
+      "sector": 38
+    },
+    {
+      "generation": 3,
+      "cell": 2,
+      "bit": 0,
+      "sector": 39
+    },
+    {
+      "generation": 3,
+      "cell": 3,
+      "bit": 0,
+      "sector": 40
+    },
+    {
+      "generation": 3,
+      "cell": 4,
+      "bit": 1,
+      "sector": 41
+    },
+    {
+      "generation": 3,
+      "cell": 5,
+      "bit": 1,
+      "sector": 42
+    },
+    {
+      "generation": 3,
+      "cell": 6,
+      "bit": 0,
+      "sector": 43
+    },
+    {
+      "generation": 3,
+      "cell": 7,
+      "bit": 1,
+      "sector": 44
+    },
+    {
+      "generation": 4,
+      "cell": 0,
+      "bit": 0,
+      "sector": 46
+    },
+    {
+      "generation": 4,
+      "cell": 1,
+      "bit": 0,
+      "sector": 47
+    },
+    {
+      "generation": 4,
+      "cell": 2,
+      "bit": 0,
+      "sector": 48
+    },
+    {
+      "generation": 4,
+      "cell": 3,
+      "bit": 1,
+      "sector": 49
+    },
+    {
+      "generation": 4,
+      "cell": 4,
+      "bit": 1,
+      "sector": 50
+    },
+    {
+      "generation": 4,
+      "cell": 5,
+      "bit": 1,
+      "sector": 51
+    },
+    {
+      "generation": 4,
+      "cell": 6,
+      "bit": 1,
+      "sector": 52
+    },
+    {
+      "generation": 4,
+      "cell": 7,
+      "bit": 1,
+      "sector": 53
+    },
+    {
+      "generation": 5,
+      "cell": 0,
+      "bit": 0,
+      "sector": 55
+    },
+    {
+      "generation": 5,
+      "cell": 1,
+      "bit": 0,
+      "sector": 56
+    },
+    {
+      "generation": 5,
+      "cell": 2,
+      "bit": 1,
+      "sector": 57
+    },
+    {
+      "generation": 5,
+      "cell": 3,
+      "bit": 1,
+      "sector": 58
+    },
+    {
+      "generation": 5,
+      "cell": 4,
+      "bit": 0,
+      "sector": 59
+    },
+    {
+      "generation": 5,
+      "cell": 5,
+      "bit": 0,
+      "sector": 60
+    },
+    {
+      "generation": 5,
+      "cell": 6,
+      "bit": 0,
+      "sector": 61
+    },
+    {
+      "generation": 5,
+      "cell": 7,
+      "bit": 1,
+      "sector": 62
+    },
+    {
+      "generation": 6,
+      "cell": 0,
+      "bit": 0,
+      "sector": 64
+    },
+    {
+      "generation": 6,
+      "cell": 1,
+      "bit": 1,
+      "sector": 65
+    },
+    {
+      "generation": 6,
+      "cell": 2,
+      "bit": 1,
+      "sector": 66
+    },
+    {
+      "generation": 6,
+      "cell": 3,
+      "bit": 1,
+      "sector": 67
+    },
+    {
+      "generation": 6,
+      "cell": 4,
+      "bit": 0,
+      "sector": 68
+    },
+    {
+      "generation": 6,
+      "cell": 5,
+      "bit": 0,
+      "sector": 69
+    },
+    {
+      "generation": 6,
+      "cell": 6,
+      "bit": 1,
+      "sector": 70
+    },
+    {
+      "generation": 6,
+      "cell": 7,
+      "bit": 1,
+      "sector": 71
+    },
+    {
+      "generation": 7,
+      "cell": 0,
+      "bit": 1,
+      "sector": 73
+    },
+    {
+      "generation": 7,
+      "cell": 1,
+      "bit": 1,
+      "sector": 74
+    },
+    {
+      "generation": 7,
+      "cell": 2,
+      "bit": 0,
+      "sector": 75
+    },
+    {
+      "generation": 7,
+      "cell": 3,
+      "bit": 1,
+      "sector": 76
+    },
+    {
+      "generation": 7,
+      "cell": 4,
+      "bit": 0,
+      "sector": 77
+    },
+    {
+      "generation": 7,
+      "cell": 5,
+      "bit": 1,
+      "sector": 78
+    },
+    {
+      "generation": 7,
+      "cell": 6,
+      "bit": 1,
+      "sector": 79
+    },
+    {
+      "generation": 7,
+      "cell": 7,
+      "bit": 1,
+      "sector": 80
+    }
+  ],
+  "geometry": {
+    "rects": 81,
+    "sectors": 81,
+    "linedefs": 180,
+    "sidedefs": 324,
+    "segs": 324,
+    "subsectors": 81,
+    "nodes": 80,
+    "vertices": 100,
+    "blockmap_blocks": 100,
+    "wad_bytes": 23357
+  }
+}

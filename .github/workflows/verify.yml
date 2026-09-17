@@ -1,0 +1,46 @@
+name: verify
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  checked-artifacts:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - name: Python tests and compile
+        run: |
+          python -m pip install pytest
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m compileall -q doomc ci tests
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m pytest tests -q
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Install pinned Lean with elan
+        shell: pwsh
+        run: |
+          Invoke-WebRequest https://github.com/leanprover/elan/releases/latest/download/elan-x86_64-pc-windows-msvc.zip -OutFile elan-ci.zip
+          Expand-Archive elan-ci.zip -DestinationPath elan-ci
+          & ./elan-ci/elan-init.exe -y --default-toolchain leanprover/lean4:v4.34.0 --no-modify-path
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & "$env:USERPROFILE/.elan/bin/lean.exe" proofs/DoomComplete.lean
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & "$env:USERPROFILE/.elan/bin/lean.exe" substrate/utm_proof.lean
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Engine integration and deterministic regeneration
+        shell: pwsh
+        run: |
+          python ci/fetch_dependencies.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $env:PYTHONPATH = "$pwd/doomc"
+          python -m doomc substrate/example.json wads/doom_utm.wad
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          git diff --exit-code -- wads
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python ci/verify_engine.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verification-evidence
+          path: log/engine_verification.json

@@ -1,0 +1,63 @@
+[
+  {
+    "N": 1,
+    "wad_bytes": 1747,
+    "sectors": 4,
+    "tics_per_simulated_step": null,
+    "engine_tested": false,
+    "compile_seconds": 0.009863599999334838,
+    "python_peak_bytes": 195389
+  },
+  {
+    "N": 2,
+    "wad_bytes": 3344,
+    "sectors": 9,
+    "tics_per_simulated_step": null,
+    "engine_tested": false,
+    "compile_seconds": 0.007553200000074867,
+    "python_peak_bytes": 203965
+  },
+  {
+    "N": 4,
+    "wad_bytes": 8570,
+    "sectors": 25,
+    "tics_per_simulated_step": null,
+    "engine_tested": false,
+    "compile_seconds": 0.015602999999828171,
+    "python_peak_bytes": 231737
+  },
+  {
+    "N": 8,
+    "wad_bytes": 27520,
+    "sectors": 81,
+    "tics_per_simulated_step": null,
+    "engine_tested": false,
+    "compile_seconds": 0.034860899999330286,
+    "python_peak_bytes": 472570
+  },
+  {
+    "N": 16,
+    "wad_bytes": 105500,
+    "sectors": 289,
+    "tics_per_simulated_step": null,
+    "engine_tested": false,
+    "compile_seconds": 0.12140949999957229,
+    "python_peak_bytes": 1728014
+  },
+  {
+    "N": 32,
+    "wad_bytes": 507697,
+    "sectors": 1089,
+    "tics_per_simulated_step": null,
+    "engine_tested": false,
+    "compile_seconds": 0.7019608999999036,
+    "python_peak_bytes": 6502366
+  },
+  {
+    "N": 64,
+    "rejected": "bounded backend supports width 1..32 and steps 0..31",
+    "meaning": "compiler policy, not engine limit",
+    "compile_seconds": 0.00012959999912709463,
+    "python_peak_bytes": 1880
+  }
+]
