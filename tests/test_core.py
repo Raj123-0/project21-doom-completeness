@@ -68,3 +68,14 @@ def test_read_wad_invalid_magic(tmp_path):
     invalid_wad.write_bytes(b"JWAD\x00\x00\x00\x00\x00\x00\x00\x00")
     with pytest.raises(ValueError, match="not a WAD file: magic=b'JWAD'"):
         read_wad(str(invalid_wad))
+
+
+def test_parse_savegame_too_short():
+    with pytest.raises(ValueError, match="savegame too short"):
+        parse_savegame(b"short", [])
+
+
+def test_parse_savegame_unexpected_version():
+    blob = bytes(24) + b"invalid 109".ljust(16, b"\0") + bytes(10)
+    with pytest.raises(ValueError, match="unexpected savegame version string"):
+        parse_savegame(blob, [])
