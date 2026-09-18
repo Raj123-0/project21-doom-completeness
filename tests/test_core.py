@@ -5,7 +5,12 @@ from doomc.mapbuild import MapBuilder, Sector
 from doomc.rule110 import cell, trace
 from doomc.savegame import parse_savegame
 from doomc.__main__ import compile_spec
+from doomc.wadfile import Lump
 
+
+def test_lump_name_too_long():
+    with pytest.raises(ValueError, match="lump name too long"):
+        Lump('123456789', b'')
 
 def test_demo_independent_known_bytes():
     d = Demo(tics=[Ticcmd(25, -3, -256, 130)])
