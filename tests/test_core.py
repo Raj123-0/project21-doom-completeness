@@ -5,7 +5,7 @@ from doomc.mapbuild import MapBuilder, Sector
 from doomc.rule110 import cell, trace
 from doomc.savegame import parse_savegame
 from doomc.__main__ import compile_spec
-from doomc.wadfile import Lump
+from doomc.wadfile import Lump, read_wad
 
 
 def test_lump_name_too_long():
@@ -61,3 +61,10 @@ def test_save_strided_fingerprints():
     saved = parse_savegame(header + bytes(302) + world + b'\x1d', fp)
     assert saved.floorheights == [0,24]
     assert saved.leveltime == 36
+
+
+def test_read_wad_invalid_magic(tmp_path):
+    invalid_wad = tmp_path / "invalid.wad"
+    invalid_wad.write_bytes(b"JWAD\x00\x00\x00\x00\x00\x00\x00\x00")
+    with pytest.raises(ValueError, match="not a WAD file: magic=b'JWAD'"):
+        read_wad(str(invalid_wad))
