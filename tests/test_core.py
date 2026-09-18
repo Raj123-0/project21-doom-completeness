@@ -84,3 +84,16 @@ def test_parse_savegame_unexpected_version():
     blob = bytes(24) + b"invalid 109".ljust(16, b"\0") + bytes(10)
     with pytest.raises(ValueError, match="unexpected savegame version string"):
         parse_savegame(blob, [])
+
+
+def test_read_demo_error_paths():
+    d = Demo(tics=[Ticcmd(25, -3, -256, 130)])
+    valid_bytes = d.to_bytes()
+
+    # Missing DEMOMARKER (truncated)
+    with pytest.raises(ValueError, match="missing marker or trailing data"):
+        read_demo(valid_bytes[:-1])
+
+    # Trailing data after DEMOMARKER
+    with pytest.raises(ValueError, match="missing marker or trailing data"):
+        read_demo(valid_bytes + b'\x00')
