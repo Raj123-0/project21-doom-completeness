@@ -259,8 +259,16 @@ class MapBuilder:
 
         def find_cut(group: Sequence[int]):
             cands = []
-            xs = sorted({self.rects[i].x0 for i in group} | {self.rects[i].x1 for i in group})
-            ys = sorted({self.rects[i].y0 for i in group} | {self.rects[i].y1 for i in group})
+            x_set = set()
+            y_set = set()
+            for i in group:
+                r = self.rects[i]
+                x_set.add(r.x0)
+                x_set.add(r.x1)
+                y_set.add(r.y0)
+                y_set.add(r.y1)
+            xs = sorted(x_set)
+            ys = sorted(y_set)
             for pos in xs:
                 if all(self.rects[i].x1 <= pos or self.rects[i].x0 >= pos for i in group):
                     a = [i for i in group if self.rects[i].x0 >= pos]
