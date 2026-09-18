@@ -56,3 +56,7 @@ def test_save_strided_fingerprints():
     saved = parse_savegame(header + bytes(302) + world + b'\x1d', fp)
     assert saved.floorheights == [0,24]
     assert saved.leveltime == 36
+
+def test_parse_savegame_too_short():
+    with pytest.raises(ValueError, match="savegame too short"):
+        parse_savegame(b"short")
