@@ -58,6 +58,23 @@ def test_wadfile_truncated(tmp_path):
         list_lumps(str(out))
 
 
+def test_compile_spec_invalid_keys(tmp_path):
+    out = tmp_path / "trace.wad"
+    with pytest.raises(ValueError, match="required keys: system, boundary, initial, steps"):
+        compile_spec({}, out)
+
+
+def test_compile_spec_invalid_values(tmp_path):
+    out = tmp_path / "trace.wad"
+    spec = {"system": "invalid", "boundary": "periodic", "initial": [1], "steps": 1}
+    with pytest.raises(ValueError, match="only periodic Rule 110 trace visualization is supported"):
+        compile_spec(spec, out)
+
+    spec2 = {"system": "rule110", "boundary": "invalid", "initial": [1], "steps": 1}
+    with pytest.raises(ValueError, match="only periodic Rule 110 trace visualization is supported"):
+        compile_spec(spec2, out)
+
+
 def test_builder_keeps_specials():
     m = MapBuilder()
     m.add_sector(Sector())
