@@ -14,6 +14,10 @@ def test_demo_independent_known_bytes():
     assert [savegame_button(i) for i in range(8)] == [130,134,138,142,146,150,154,158]
     with pytest.raises(ValueError):
         Ticcmd(forwardmove=-128).bytes()
+    with pytest.raises(ValueError):
+        savegame_button(8)
+    with pytest.raises(ValueError):
+        savegame_button(-1)
 
 
 def test_rule_table():
