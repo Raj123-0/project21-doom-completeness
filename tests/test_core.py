@@ -21,6 +21,11 @@ def test_demo_independent_known_bytes():
         Ticcmd(forwardmove=-128).bytes()
 
 
+def test_read_demo_wrong_version():
+    with pytest.raises(ValueError, match="unexpected demo version 108"):
+        read_demo(bytes([108]))
+
+
 def test_rule_table():
     assert [cell(i>>2, (i>>1)&1, i&1) for i in range(8)] == [0,1,1,1,0,1,1,0]
     assert trace([0,0,0,1], 2) == [[0,0,0,1],[0,0,1,1],[0,1,1,1]]
