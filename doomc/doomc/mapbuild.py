@@ -259,8 +259,16 @@ class MapBuilder:
 
         def find_cut(group: Sequence[int]):
             cands = []
-            xs = sorted({self.rects[i].x0 for i in group} | {self.rects[i].x1 for i in group})
-            ys = sorted({self.rects[i].y0 for i in group} | {self.rects[i].y1 for i in group})
+            x_set = set()
+            y_set = set()
+            for i in group:
+                r = self.rects[i]
+                x_set.add(r.x0)
+                x_set.add(r.x1)
+                y_set.add(r.y0)
+                y_set.add(r.y1)
+            xs = sorted(x_set)
+            ys = sorted(y_set)
             for pos in xs:
                 if all(self.rects[i].x1 <= pos or self.rects[i].x0 >= pos for i in group):
                     a = [i for i in group if self.rects[i].x0 >= pos]
@@ -391,17 +399,16 @@ class MapBuilder:
         if cur > 0xFFFF:
             raise ValueError("blockmap too large for the 16-bit vanilla format")
 
-        def gen_blocklist():
-            for blk in blocks:
-                yield 0
-                yield from blk
-                yield 0xFFFF
+        flat_blocks = []
+        for blk in blocks:
+            flat_blocks.append(0)
+            flat_blocks.extend(blk)
+            flat_blocks.append(0xFFFF)
 
-        blocklist = list(gen_blocklist())
         blockmap_bytes = (
             _shorts([xorigin, yorigin, xblocks, yblocks])
-            + struct.pack(f"<{len(offsets)}H", *offsets)
-            + struct.pack(f"<{len(blocklist)}H", *blocklist)
+            + struct.pack("<" + "H" * len(offsets), *offsets)
+            + struct.pack("<" + "H" * len(flat_blocks), *flat_blocks)
         )
 
         self._lumps = [
