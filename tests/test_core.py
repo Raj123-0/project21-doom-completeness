@@ -38,6 +38,16 @@ def test_bound():
         trace([1]*64, 63)
 
 
+def test_wadfile_truncated(tmp_path):
+    from doomc.wadfile import read_wad, list_lumps
+    out = tmp_path / "trunc.wad"
+    out.write_bytes(b"PWAD\x00\x00")
+    with pytest.raises(ValueError, match="WAD file too small"):
+        read_wad(str(out))
+    with pytest.raises(ValueError, match="WAD file too small"):
+        list_lumps(str(out))
+
+
 def test_builder_keeps_specials():
     m = MapBuilder()
     m.add_sector(Sector())
