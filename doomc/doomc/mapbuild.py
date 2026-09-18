@@ -390,10 +390,17 @@ class MapBuilder:
             cur += len(blk) + 2
         if cur > 0xFFFF:
             raise ValueError("blockmap too large for the 16-bit vanilla format")
+
+        flat_blocks = []
+        for blk in blocks:
+            flat_blocks.append(0)
+            flat_blocks.extend(blk)
+            flat_blocks.append(0xFFFF)
+
         blockmap_bytes = (
             _shorts([xorigin, yorigin, xblocks, yblocks])
-            + b"".join(struct.pack("<H", o) for o in offsets)
-            + b"".join(struct.pack("<H", li) for blk in blocks for li in [0] + blk + [0xFFFF])
+            + struct.pack("<" + "H" * len(offsets), *offsets)
+            + struct.pack("<" + "H" * len(flat_blocks), *flat_blocks)
         )
 
         self._lumps = [
