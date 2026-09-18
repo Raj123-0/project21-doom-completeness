@@ -61,7 +61,7 @@ class Savegame:
         import hashlib
 
         idx = list(range(self.numsectors)) if indices is None else list(indices)
-        blob = struct.pack("<" + "i" * len(idx), *[self.floorheights[i] for i in idx])
+        blob = struct.pack("<" + "i" * len(idx), *(self.floorheights[i] for i in idx))
         return hashlib.sha256(blob).hexdigest()
 
     def full_hash(self) -> str:
