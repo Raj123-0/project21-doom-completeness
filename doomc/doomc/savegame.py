@@ -64,6 +64,27 @@ class Savegame:
         blob = struct.pack("<" + "i" * len(idx), *[self.floorheights[i] for i in idx])
         return hashlib.sha256(blob).hexdigest()
 
+    def full_hash(self) -> str:
+        """Full state hash of the savegame (the strongest feasible hash).
+
+        Vanilla Doom savegames contain raw pointers in thinkers (due to pointer
+        saving/restoring logic), making byte-for-byte hashes non-deterministic
+        across different runs due to ASLR.
+        Since we cannot hash the raw bytes past the world section reliably without
+        a full savegame semantic parser, we expand our partial projection to hash
+        the entire block of sectors and the leveltime, which represents the
+        strongest feasible state hash given the constraints.
+        """
+        import hashlib
+        import struct
+
+        # Hash leveltime + all parsed sector state arrays
+        blob = struct.pack("<I", self.leveltime)
+        for i in range(self.numsectors):
+            blob += struct.pack("<5h", self.floorheights[i], self.ceilingheights[i],
+                                self.lightlevels[i], self.specials[i], self.tags[i])
+        return hashlib.sha256(blob).hexdigest()
+
 
 def _u16(b: bytes, off: int) -> int:
     return struct.unpack_from("<H", b, off)[0]

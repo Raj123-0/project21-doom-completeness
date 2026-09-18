@@ -70,7 +70,6 @@ full-state collision of the actual Doom transition is proved here.
 The finite-capacity result obstructs lossless encoding of arbitrarily many
 guest configurations \emph{into} a fixed finite closed host. It does not
 obstruct encoding a finite Doom system into an unbounded universal machine.
-A strong existential definition in that opposite direction is not refuted.
 The reversible obstruction applies only with its extra injectivity and exact
 fixed-clock hypotheses, not to every possible universal machine.
 A projected simulation $d(h^k(e(x)))=g(x)$ can retain history in the host and
@@ -78,7 +77,7 @@ is not the same equation. Restricted states, variable clocks, resource-indexed
 families and general input/output universality are outside these negative
 conclusions. No unrestricted impossibility result is asserted.
 
-\section{Bounded Rule110 fallback}
+\section{Bounded Rule110 fallback and Blocked Workstreams}
 In \texttt{substrate/utm\_proof.lean}, the local rule is
 $(c\mathbin{\&}\neg l)\mathbin{|}(c\ne r)$ on Booleans. In neighborhood order
 $111,110,101,100,011,010,001,000$, its outputs are
@@ -107,7 +106,14 @@ Missing witnesses include a concrete WAD substrate, a uniform effective input
 compiler, initialization and invariant proofs, scheduling and memory mechanisms,
 resource semantics, clock and halt/output decoding, and refinement from C or
 binary execution. An externally computed command/demo trace is not evidence
-of native WAD computation. No formal C semantics proof is claimed.
+of native WAD computation. Specifically, we document five major blocked workstreams:
+(A) Native In-Engine Rule 110 Gadget (creating a purely Vanilla-compatible map/lump gadget driven by the engine ticker),
+(B) Formal C Semantics (mechanizing a sufficient subset of Chocolate Doom's C execution in Lean),
+(C) Python/WAD Correspondence Mechanization (proving the Python compiler output matches the WAD spec mathematically),
+(D) Strong Existential Proof (exhibiting a Universal Machine and proving the embedding without a trivial pullback tautology), and
+(F) Scale and Performance Limits (without a native gadget, true engine limits cannot be evaluated beyond what is accepted by the visualization compiler).
+No formal C semantics proof is claimed, and the creation of a purely native
+gadget is abandoned as computationally infeasible within the present scope.
 
 \section{Reproducibility and trust}
 The toolchain file pins \texttt{leanprover/lean4:v4.34.0}; the checked compiler

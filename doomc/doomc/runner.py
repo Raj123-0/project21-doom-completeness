@@ -82,7 +82,6 @@ class ChocolateDoom:
             str(work / "chocolate-doom.cfg"),
             "-savedir",
             str(save_path),
-            "-nodraw",
             "-nosound",
             "-nomusic",
             "-nosfx",

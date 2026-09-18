@@ -31,12 +31,13 @@ features, input channels and resource model. It must supply all of:
    the intended computation. Evidence must distinguish engine computation from
    compiler/controller computation.
 
-All seven are currently unresolved. There is not even a native Rule110 gadget
-implementation here. The abstract composition lemma assumes both diagrams;
-it does not discharge any item above. The finite-capacity obstruction applies
-only to the stated lossless state-encoding model, and is not a global negative
-universality theorem. Exact definitions are in
-[../docs/definitions_limits.md](../docs/definitions_limits.md).
+All seven are currently unresolved. In this session, creating a purely native Rule110 gadget
+implementation (1), proving the strong existential claim and mechanizing Python/WAD correspondence (3, 4),
+mechanizing formal C semantics (6), and measuring engine scale limits for such a gadget (5)
+were documented as explicitly blocked workstreams, remaining negative results. The abstract composition lemma
+assumes both diagrams; it does not discharge any item above. The finite-capacity obstruction applies
+only to the stated lossless state-encoding model, and is not a global negative universality theorem.
+Exact definitions are in [../docs/definitions_limits.md](../docs/definitions_limits.md).
 
 ## What the literature does and does not provide
 

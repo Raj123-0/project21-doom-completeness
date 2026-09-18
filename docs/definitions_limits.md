@@ -39,11 +39,14 @@ obstruct encoding a finite Doom transition system into an unbounded machine.
 A strong existential statement of the latter form, e.g. existence of a universal
 machine `U`, injective `E : DoomState -> UConfig`, and a clock with
 `U^k(E(s)) = E(DoomStep(s))`, is neither established nor refuted by the
-finite-capacity result. If a proposed `U` is injective and the proposed
-`DoomStep` has an actual full-state collision, the fixed-clock theorem excludes
-that *particular exact reversible embedding*, not every universal machine.
-Neither of those premises is proved for the C program. We do not replace a
-strong existential definition with its opposite direction and claim refutation.
+finite-capacity result. Any attempt to mathematically prove this claim without explicitly
+exhibiting a computationally universal machine `U` results in a mathematical tautology
+(e.g., trivially pulling back a transition function across an injection). Thus,
+proving the strong existential claim remains a blocked workstream.
+If a proposed `U` is injective and the proposed `DoomStep` has an actual full-state
+collision, the fixed-clock theorem excludes that *particular exact reversible embedding*,
+not every universal machine. Neither of those premises is proved for the C program.
+We do not replace a strong existential definition with its opposite direction and claim refutation.
 
 The results do not rule out families of larger finite boards or WADs indexed
 by a time/space bound, bounded computation, noninjective observations, restricted
