@@ -60,6 +60,8 @@ def read_wad(path: str) -> Dict[str, bytes]:
     """Read a WAD into an ordered dict name -> data (last lump of a name wins)."""
     with open(path, "rb") as fh:
         blob = fh.read()
+    if len(blob) < 12:
+        raise ValueError(f"WAD file too small: {len(blob)} bytes")
     magic = blob[:4]
     if magic not in (b"IWAD", b"PWAD"):
         raise ValueError(f"not a WAD file: magic={magic!r}")
@@ -75,6 +77,8 @@ def read_wad(path: str) -> Dict[str, bytes]:
 def list_lumps(path: str) -> List[Tuple[str, int]]:
     with open(path, "rb") as fh:
         blob = fh.read()
+    if len(blob) < 12:
+        raise ValueError(f"WAD file too small: {len(blob)} bytes")
     numlumps, infotableofs = struct.unpack_from("<ii", blob, 4)
     out = []
     for i in range(numlumps):
