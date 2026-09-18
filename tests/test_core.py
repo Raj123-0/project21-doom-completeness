@@ -3,7 +3,7 @@ import pytest
 from doomc.lmp import Demo, Ticcmd, read_demo, savegame_button
 from doomc.mapbuild import MapBuilder, Sector
 from doomc.rule110 import cell, trace
-from doomc.savegame import parse_savegame
+from doomc.savegame import parse_savegame, Savegame
 from doomc.__main__ import compile_spec
 
 
@@ -56,3 +56,35 @@ def test_save_strided_fingerprints():
     saved = parse_savegame(header + bytes(302) + world + b'\x1d', fp)
     assert saved.floorheights == [0,24]
     assert saved.leveltime == 36
+
+def test_savegame_state_hash():
+    import hashlib
+    s = Savegame(
+        raw=b'',
+        skill=1,
+        episode=1,
+        map=1,
+        playeringame=[1,0,0,0],
+        leveltime=100,
+        sector_offset=0,
+        numsectors=3,
+        floorheights=[10, 20, 30],
+        ceilingheights=[100, 200, 300],
+        floorpics=[1, 2, 3],
+        ceilingpics=[4, 5, 6],
+        lightlevels=[100, 100, 100],
+        specials=[0, 0, 0],
+        tags=[0, 0, 0]
+    )
+
+    # Check default (all indices)
+    h1 = s.state_hash()
+    b1 = struct.pack("<iii", 10, 20, 30)
+    expected1 = hashlib.sha256(b1).hexdigest()
+    assert h1 == expected1
+
+    # Check with specific indices
+    h2 = s.state_hash([0, 2])
+    b2 = struct.pack("<ii", 10, 30)
+    expected2 = hashlib.sha256(b2).hexdigest()
+    assert h2 == expected2
